@@ -1293,7 +1293,8 @@ func asuh(session *discordgo.Session, guildID, chanID, authorID, messageID strin
 			}
 			continue
 		}
-		suh := rand.Intn(2)
+		suh := rand.Intn(35)
+		suh += 20
 		currentVoiceChans[guildID] = make(chan bool)
 		dgvoice.PlayAudioFile(currentVoiceSessions[guildID], fmt.Sprintf("suh/suh%d.mp3", suh), currentVoiceChans[guildID])
 		break
