@@ -1,4 +1,4 @@
-package main
+﻿package main
 
 import (
 	"bufio"
@@ -1293,7 +1293,7 @@ func asuh(session *discordgo.Session, guildID, chanID, authorID, messageID strin
 			}
 			continue
 		}
-		suh := rand.Intn(65)
+		suh := rand.Intn(2)
 		currentVoiceChans[guildID] = make(chan bool)
 		dgvoice.PlayAudioFile(currentVoiceSessions[guildID], fmt.Sprintf("suh/suh%d.mp3", suh), currentVoiceChans[guildID])
 		break
